@@ -1,0 +1,46 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+   <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:background="@drawable/fundo_barra"
+      android:paddingTop="6dp">
+      <ImageButton 
+          android:id="@+id/btnNovo" 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/novo"
+          android:visibility="invisible" />
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:gravity="center"
+          android:layout_weight="1">
+          <ImageButton 
+             android:id="@+id/btnAnterior" 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/anterior"
+             android:visibility="invisible" />
+          <ImageButton 
+             android:id="@+id/btnProximo" 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/proximo"
+             android:visibility="invisible" />
+      </LinearLayout>
+      <ImageButton 
+          android:id="@+id/btnSobre" 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/config"
+          android:layout_gravity="right" />
+      <ImageButton 
+          android:id="@+id/btnSair" 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/sair"
+          android:layout_gravity="right" />
+   </LinearLayout>
+</merge>

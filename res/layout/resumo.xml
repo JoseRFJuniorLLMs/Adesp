@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical"
+  android:background="@drawable/fundo">
+
+<!-- titulo do aplicativo -->
+<TextView
+   android:id="@+id/titBarra" 
+   android:layout_width="fill_parent" 
+   android:layout_height="wrap_content"
+   android:background="@drawable/barra"
+   android:textSize="16sp"
+   android:textColor="#FFFFFF"
+   android:gravity="center"
+   android:text="@string/app_nome"
+   android:shadowColor="#DDD"
+   android:shadowRadius="2"  
+   android:shadowDx="1"  
+   android:shadowDy="1" />
+
+  <TableLayout
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:background="@drawable/fundo_status"
+  android:stretchColumns="0"
+  android:padding="8dp">
+
+   <TableRow>
+      <ImageView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/valor"
+         android:paddingTop="8dp" />
+
+      <TableLayout
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:padding="6dp">
+
+         <TableRow>
+            <TextView 
+               android:layout_width="fill_parent" 
+               android:layout_height="wrap_content"
+               android:textColor="#FFF"
+               android:gravity="right"
+               android:text="@string/txtResumo1"
+               android:textSize="16sp"
+               android:shadowColor="#000"
+               android:shadowRadius="2"  
+               android:shadowDx="1"  
+               android:shadowDy="1" />
+            <TextView
+               android:id="@+id/totalReceita" 
+               android:layout_width="fill_parent" 
+               android:layout_height="wrap_content"
+               android:gravity="right"
+               android:textColor="#FFF"
+               android:text="0,00"
+               android:textSize="16sp"
+               android:shadowColor="#000"
+               android:shadowRadius="2"  
+               android:shadowDx="1"  
+               android:shadowDy="1" />
+         </TableRow>
+         <TableRow>
+            <TextView 
+               android:layout_width="fill_parent" 
+               android:layout_height="wrap_content"
+               android:textColor="#FFF"
+               android:gravity="right"
+               android:text="@string/txtResumo2"
+               android:textSize="16sp"
+               android:shadowColor="#000"
+               android:shadowRadius="2"  
+               android:shadowDx="1"  
+               android:shadowDy="1" />
+            <TextView
+               android:id="@+id/totalPagar" 
+               android:layout_width="fill_parent" 
+               android:layout_height="wrap_content"
+               android:gravity="right"
+               android:textColor="#FFF"
+               android:text="0,00"
+               android:textSize="16sp"
+               android:shadowColor="#000"
+               android:shadowRadius="2"  
+               android:shadowDx="1"  
+               android:shadowDy="1" />
+         </TableRow>
+         <TableRow>
+            <TextView 
+               android:layout_width="fill_parent" 
+               android:layout_height="wrap_content"
+               android:textColor="#FFF"
+               android:gravity="right"
+               android:text="@string/txtResumo3"
+               android:textSize="16sp"
+               android:shadowColor="#000"
+               android:shadowRadius="2"  
+               android:shadowDx="1"  
+               android:shadowDy="1" />
+            <TextView
+               android:id="@+id/totalPago" 
+               android:layout_width="fill_parent" 
+               android:layout_height="wrap_content"
+               android:textColor="#FFF"
+               android:gravity="right"
+               android:text="0,00"
+               android:textSize="16sp"
+               android:shadowColor="#000"
+               android:shadowRadius="2"  
+               android:shadowDx="1"  
+               android:shadowDy="1" />
+         </TableRow>
+         <View android:layout_height="2px" android:background="#0000FF" />
+         <TableRow>
+            <TextView 
+               android:layout_width="fill_parent" 
+               android:layout_height="wrap_content"
+               android:textColor="#FFF"
+               android:gravity="right"
+               android:text="@string/txtResumo4"
+               android:textSize="16sp"
+               android:shadowColor="#000"
+               android:shadowRadius="2"  
+               android:shadowDx="1"  
+               android:shadowDy="1" />
+            <TextView
+               android:id="@+id/totalBalanco" 
+               android:layout_width="fill_parent" 
+               android:layout_height="wrap_content"
+               android:textColor="#FFF"
+               android:gravity="right"
+               android:text="0,00"
+               android:textSize="16sp"
+               android:shadowColor="#000"
+               android:shadowRadius="2"  
+               android:shadowDx="1"  
+               android:shadowDy="1" />
+         </TableRow>
+         <TableRow>
+            <TextView 
+               android:layout_width="fill_parent" 
+               android:layout_height="wrap_content"
+               android:textColor="#FFF"
+               android:gravity="right"
+               android:text="@string/txtResumo5"
+               android:textSize="16sp"
+               android:shadowColor="#000"
+               android:shadowRadius="2"  
+               android:shadowDx="1"  
+               android:shadowDy="1" />
+            <TextView
+               android:id="@+id/totalBalancoReal" 
+               android:layout_width="fill_parent" 
+               android:layout_height="wrap_content"
+               android:textColor="#FFF"
+               android:gravity="right"
+               android:text="0,00"
+               android:textSize="16sp"
+               android:shadowColor="#000"
+               android:shadowRadius="2"  
+               android:shadowDx="1"  
+               android:shadowDy="1" />
+         </TableRow>
+      </TableLayout>
+  </TableRow>
+</TableLayout>
+
+<ListView
+  android:id="@+id/ListView01" 
+  android:cacheColorHint="#00000000"
+  android:layout_width="fill_parent" 
+  android:layout_height="wrap_content"
+  android:layout_weight="1"
+  android:paddingTop="4dp" />
+
+<!-- barra de opcoes -->
+<br.com.monteoliva.biblioteca.BarraOpcoes1 
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content" />
+
+</LinearLayout>

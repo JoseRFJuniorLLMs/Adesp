@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:orientation="vertical"
+   android:background="@drawable/fundo">
+
+   <!-- titulo do aplicativo -->
+   <TextView
+      android:layout_width="fill_parent" 
+      android:layout_height="wrap_content"
+      android:background="@drawable/barra"
+      android:textSize="17sp"
+      android:textColor="#FFFFFF"
+      android:gravity="center"
+      android:text="@string/txtConfig"
+      android:shadowColor="#DDD"
+      android:shadowRadius="2"  
+      android:shadowDx="1"  
+      android:shadowDy="1" />
+
+   <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:gravity="center"
+      android:layout_weight="1">
+      <ListView
+         android:id="@+id/ListConfig" 
+         android:cacheColorHint="#00000000"
+         android:layout_width="fill_parent" 
+         android:layout_height="wrap_content"
+         android:layout_margin="10dp"
+         android:background="@drawable/fundo_status"
+         android:padding="20dp" />
+   </LinearLayout>
+
+<!-- barra de opcoes -->
+<br.com.monteoliva.biblioteca.ToolBar1 
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content" />
+
+</LinearLayout>

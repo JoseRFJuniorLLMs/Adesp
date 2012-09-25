@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:orientation="vertical"
+   android:background="@drawable/fundo">
+
+   <!-- titulo do aplicativo -->
+   <TextView
+     android:id="@+id/titBarra" 
+     android:layout_width="fill_parent" 
+     android:layout_height="wrap_content"
+     android:background="@drawable/barra"
+     android:textSize="17sp"
+     android:textColor="#FFFFFF"
+     android:gravity="center"
+     android:text="@string/app_nome"
+     android:shadowColor="#DDD"
+     android:shadowRadius="2"  
+     android:shadowDx="1"  
+     android:shadowDy="1" />
+
+     <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <!--  formulario -->
+        <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:padding="8dp">
+        <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="#FFFFFF"
+           android:text="@string/labelCampo6"
+           android:textSize="14sp"
+           android:shadowColor="#000"
+           android:shadowRadius="2"  
+           android:shadowDx="1"  
+           android:shadowDy="1" />
+        <EditText
+           android:id="@+id/descricao"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:hint="@string/txtHintCampo2"
+           android:imeOptions="actionDone" />
+        <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="#FFFFFF"
+           android:text="@string/labelCampo10"
+           android:textSize="14sp"
+           android:shadowColor="#000"
+           android:shadowRadius="2"  
+           android:shadowDx="1"  
+           android:shadowDy="1" />
+        <RadioGroup
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingLeft="4px"
+           android:orientation="horizontal">
+           <RadioButton
+              android:id="@+id/TipoDespesa"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/labelDespesa"
+              android:paddingRight="8dp"
+              android:checked="true"
+              android:textSize="12sp"
+              android:shadowColor="#000"
+              android:shadowRadius="2"  
+              android:shadowDx="1"  
+              android:shadowDy="1" />
+           <RadioButton
+              android:id="@+id/TipoReceita"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/labelReceita"
+              android:textSize="12sp"
+              android:shadowColor="#000"
+              android:shadowRadius="2"  
+              android:shadowDx="1"  
+              android:shadowDy="1" />
+   </RadioGroup>
+
+   </LinearLayout>
+   <!-- Fim do formulario -->
+
+   </ScrollView>
+
+   <!-- barra de opcoes -->
+   <br.com.monteoliva.biblioteca.ToolBar 
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+</LinearLayout>

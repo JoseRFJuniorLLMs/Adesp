@@ -1,0 +1,20 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+   <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:background="@drawable/fundo_barra"
+      android:paddingTop="6dp"
+      android:gravity="center">
+      <ImageButton 
+          android:id="@+id/btnGravar" 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@android:drawable/ic_menu_save" />
+      <ImageButton
+         android:id="@+id/btnCancelar"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@android:drawable/ic_menu_revert" />
+   </LinearLayout>
+</merge>

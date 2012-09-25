@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:orientation="vertical"
+   android:background="@drawable/fundo">
+
+<LinearLayout 
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:orientation="vertical"
+   android:gravity="center"
+   android:layout_weight="1">
+
+   <!-- titulo do aplicativo -->
+   <TextView
+     android:id="@+id/titBarra" 
+     android:layout_width="fill_parent" 
+     android:layout_height="wrap_content"
+     android:background="@drawable/barra"
+     android:textSize="17sp"
+     android:textColor="#FFFFFF"
+     android:gravity="center"
+     android:text="@string/txtSenha"
+     android:shadowColor="#DDD"
+     android:shadowRadius="2"  
+     android:shadowDx="1"  
+     android:shadowDy="1" />
+
+   <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:gravity="center"
+      android:layout_weight="1"
+      android:padding="6dp">
+      <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:background="@drawable/fundo_status"
+         android:padding="10dp">
+         <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="@string/labelCampo12"
+            android:textSize="16sp"
+            android:shadowColor="#888"
+            android:shadowRadius="2"  
+            android:shadowDx="1"  
+            android:shadowDy="1" />
+         <EditText
+            android:id="@+id/senha"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/txtHintCampo4"
+            android:imeOptions="actionDone" />
+         <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+            <CheckBox
+               android:id="@+id/chkGravar"
+               android:text="@string/labelCampo13"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textColor="#fff"
+               android:textSize="16sp"
+               android:shadowColor="#888"
+               android:shadowRadius="2"  
+               android:shadowDx="1"  
+               android:shadowDy="1" />
+            <TextView
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1" />
+            <Button
+               android:id="@+id/btnEntrar"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:drawableLeft="@drawable/enter"
+               android:text="@string/btnEntrar" />
+         </LinearLayout>
+      </LinearLayout>
+   </LinearLayout>
+
+</LinearLayout>
+</LinearLayout>

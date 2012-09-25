@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:orientation="vertical"
+  android:background="@drawable/fundo">
+
+   <!-- titulo do aplicativo -->
+   <TextView
+     android:id="@+id/titBarra" 
+     android:layout_width="fill_parent" 
+     android:layout_height="wrap_content"
+     android:background="@drawable/barra"
+     android:textSize="17sp"
+     android:textColor="#FFFFFF"
+     android:gravity="center"
+     android:text="@string/app_nome"
+     android:shadowColor="#DDD"
+     android:shadowRadius="2"  
+     android:shadowDx="1"  
+     android:shadowDy="1" />
+
+     <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <!--  formulario -->
+        <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:padding="8dp">
+
+           <!-- Descricao da Receita -->
+           <TextView
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:textColor="#FFFFFF"
+              android:text="@string/labelCampo11"
+              android:textSize="14sp"
+              android:shadowColor="#000"
+              android:shadowRadius="2"  
+              android:shadowDx="1"  
+              android:shadowDy="1" />
+           <EditText
+              android:id="@+id/descricao"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:hint="@string/txtHintCampo3"
+              android:imeOptions="actionNext" />
+
+           <!-- Valor -->
+           <TextView
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:textColor="#FFFFFF"
+              android:text="@string/labelCampo2"
+              android:textSize="14sp"
+              android:shadowColor="#000"
+              android:shadowRadius="2"  
+              android:shadowDx="1"  
+              android:shadowDy="1" />
+           <EditText
+              android:id="@+id/valor"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:numeric="integer|decimal"
+              android:inputType="numberDecimal"
+              android:gravity="right"
+              android:imeOptions="actionDone" />
+
+           <!-- Categoria -->
+           <TextView
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:textColor="#FFFFFF"
+              android:text="@string/labelCampo7"
+              android:textSize="14sp"
+              android:shadowColor="#000"
+              android:shadowRadius="2"  
+              android:shadowDx="1"  
+              android:shadowDy="1" />
+           <Spinner
+              android:id="@+id/comboCategoria"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:drawSelectorOnTop="true"
+              android:prompt="@string/labelCampo8" />
+
+   </LinearLayout>
+   <!-- Fim do formulario -->
+
+   </ScrollView>
+
+   <!-- barra de opcoes -->
+   <br.com.monteoliva.biblioteca.ToolBar 
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+</LinearLayout>

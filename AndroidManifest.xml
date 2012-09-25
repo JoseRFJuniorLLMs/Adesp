@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest android:versionCode="3" android:versionName="3.5"
+    package="br.com.monteoliva.adesp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:label="@string/app_name" android:name=".aDesp" android:theme="@style/aDesp.Theme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".aDespLista" android:theme="@style/aDesp.Theme"/>
+        <activity android:name=".aDespIncluir" android:theme="@style/aDesp.Theme"/>
+        <activity android:name=".aDespEditar" android:theme="@style/aDesp.Theme"/>
+        <activity android:name=".aDespListaCategoria" android:theme="@style/aDesp.Theme"/>
+        <activity android:name=".aDespResumo" android:theme="@style/aDesp.Theme"/>
+        <activity android:name=".aDespInicio" android:theme="@style/aDesp.Theme">
+            <intent-filter>
+                <action android:name="ADESP_INICIO"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".aDespIncluirCategoria" android:theme="@style/aDesp.Theme"/>
+        <activity android:name=".aDespEditarCategoria" android:theme="@style/aDesp.Theme"/>
+        <activity android:name=".aDespListaReceita" android:theme="@style/aDesp.Theme"/>
+        <!-- executa com o alrme de vencimento -->
+        <receiver android:name=".aDespExecutarAlarme">
+            <intent-filter>
+                <action android:name="ADESP_EXECUTAR_ALARME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <!-- inicia no Boot do aparelho -->
+        <receiver android:name=".aDespExecutarBoot">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name=".aDespIncluirReceita" android:theme="@style/aDesp.Theme"/>
+        <activity android:name=".aDespEditarReceita" android:theme="@style/aDesp.Theme"/>
+        <activity android:name=".aDespConfig" android:theme="@style/aDesp.Theme"/>
+        <activity android:name=".aDespSenha" android:theme="@style/aDesp.Theme">
+            <intent-filter>
+                <action android:name="ADESP_SENHA"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ConfiguracaoSenha" android:theme="@style/aDesp.Dialog"/>
+        <activity android:name="br.com.monteoliva.backup.ListaBackup" android:theme="@style/aDesp.Dialog"/>
+    </application>
+    <uses-sdk android:minSdkVersion="4"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+</manifest>

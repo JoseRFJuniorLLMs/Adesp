@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:orientation="vertical"
+   android:background="@drawable/fundo">
+
+   <!-- titulo do aplicativo -->
+   <TextView
+     android:id="@+id/titBarra" 
+     android:layout_width="fill_parent" 
+     android:layout_height="wrap_content"
+     android:background="@drawable/barra"
+     android:textSize="17sp"
+     android:textColor="#FFFFFF"
+     android:gravity="center"
+     android:text="@string/app_nome"
+     android:shadowColor="#DDD"
+     android:shadowRadius="2"  
+     android:shadowDx="1"  
+     android:shadowDy="1" />
+
+     <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+     <!--  formulario -->
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+        
+        <!-- Descricao da Despesa -->
+        <TextView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:textColor="#FFFFFF"
+           android:text="@string/labelCampo1"
+           android:textSize="14sp"
+           android:shadowColor="#000"
+           android:shadowRadius="2"  
+           android:shadowDx="1"  
+           android:shadowDy="1" />
+        <EditText
+           android:id="@+id/descricao"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:hint="@string/txtHintCampo1"
+           android:imeOptions="actionNext" />
+
+        <!-- Valor da Despesa -->
+        <TextView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:textColor="#FFFFFF"
+           android:text="@string/labelCampo2"
+           android:textSize="14sp"
+           android:shadowColor="#000"
+           android:shadowRadius="2"  
+           android:shadowDx="1"  
+           android:shadowDy="1" />
+        <EditText
+           android:id="@+id/valor"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:numeric="integer|decimal"
+           android:inputType="numberDecimal"
+           android:gravity="right"
+           android:imeOptions="actionNext" />
+        
+        <!-- Dia de vencimento da Despesa -->
+        <TextView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:textColor="#FFFFFF"
+           android:text="@string/labelCampo3"
+           android:textSize="14sp"
+           android:shadowColor="#000"
+           android:shadowRadius="2"  
+           android:shadowDx="1"  
+           android:shadowDy="1" />
+        <EditText
+           android:id="@+id/vencimento"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:numeric="integer"
+           android:inputType="number"
+           android:gravity="right"
+           android:imeOptions="actionDone"
+           android:paddingLeft="4px" />
+
+        <!-- Categoria -->
+        <TextView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:textColor="#FFFFFF"
+           android:text="@string/labelCampo7"
+           android:textSize="14sp"
+           android:shadowColor="#000"
+           android:shadowRadius="2"  
+           android:shadowDx="1"  
+           android:shadowDy="1" />
+        <Spinner
+           android:id="@+id/comboCategoria"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:drawSelectorOnTop="true"
+           android:prompt="@string/labelCampo8" />
+
+        <!-- Despesa paga -->
+        <TextView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:textColor="#FFFFFF"
+           android:text="@string/labelCampo4"
+           android:textSize="14sp"
+           android:shadowColor="#000"
+           android:shadowRadius="2"  
+           android:shadowDx="1"  
+           android:shadowDy="1" />
+        <RadioGroup
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingLeft="4px"
+           android:orientation="horizontal">
+           <RadioButton
+              android:id="@+id/pagoSim"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/labelSim" />
+           <RadioButton
+              android:id="@+id/pagoNao"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/labelNao"
+              android:checked="true" />
+        </RadioGroup>
+
+   </LinearLayout>
+   <!-- Fim do formulario -->
+
+   </ScrollView>
+
+   <!-- barra de opcoes -->
+   <br.com.monteoliva.biblioteca.ToolBar 
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+</LinearLayout>

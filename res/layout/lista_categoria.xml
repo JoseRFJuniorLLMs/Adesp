@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:stretchColumns="1">
+
+   <TableRow android:padding="2dp">
+      <ImageView
+         android:id="@+id/icone"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="4dp"
+         android:src="@drawable/categorias" />
+         <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+            <TextView
+               android:id="@+id/descricao"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Descrição"
+               android:textStyle="bold"
+               android:textColor="#FFF"
+               android:textSize="16sp"
+               android:shadowColor="#000"
+               android:shadowRadius="2"  
+               android:shadowDx="1"  
+               android:shadowDy="1" />
+            <TextView
+               android:id="@+id/categoria"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Categoria"
+               android:textSize="10sp"
+               android:textColor="#FFF"
+               android:shadowColor="#000"
+               android:shadowRadius="2"  
+               android:shadowDx="1"  
+               android:shadowDy="1" />
+      </LinearLayout>
+      <TextView
+         android:id="@+id/total"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="R$ 0,00"
+         android:textSize="12sp"
+         android:textStyle="bold"
+         android:textColor="#FFF"
+         android:padding="8dp"
+         android:gravity="right"
+         android:visibility="invisible"
+         android:shadowColor="#000"
+         android:shadowRadius="2"  
+         android:shadowDx="1"  
+         android:shadowDy="1" />
+   </TableRow>
+</TableLayout>
